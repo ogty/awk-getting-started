@@ -19,11 +19,7 @@ fn main() {
 
     if cfg!(windows) {
         run("powershell", vec!["compress-archive", path, path])
-    } else if cfg!(macros) {
-        run("zip", vec!["-r", &format!("./{}.zip", path), path])
     } else {
-        panic!("Error");
+        run("zip", vec!["-r", &format!("./{}.zip", path), path])
     }
-
-    println!("Hello, world!");
 }
