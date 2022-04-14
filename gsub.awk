@@ -1,4 +1,5 @@
-function gsub(string, before, after) {
+# gsub with return value
+function rgsub(string, before, after) {
     split(string, tmp, before);
     
     for (i = 0; i < length(tmp); i++) {
